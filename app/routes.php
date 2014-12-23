@@ -31,13 +31,25 @@ Route::get('/mysettings', function()
 // landing page
 Route::get('/', function()
 {
-	return View::make('landing_page');
+	$fund_csv = File::get(app_path().'/database/fnd.csv');
+	$fund_list = str_getcsv($fund_csv,"\r\n"); //true = output array, false = output object
+
+	return View::make('_landing_page')
+		->with('fund_list', $fund_list);
 });
 
-// login page
-Route::get('/login', function()
+// process signup form
+Route::post('/signup', function()
 {
-	return View::make('login');
+
+ 	$user = new User;
+ 	$user->name = Input::get('name');
+ 	$user->password = Hash::make(Input::get('password'));
+ 	$user->email = Input::get('email');
+ 	$user->fund = Input::get('fund');
+ 	$user->save();
+
+	return Response::make('User created! Hurray!');
 });
 
 ?>

@@ -9,6 +9,7 @@
 @section('content')
 <h1>Upcoming Votes</h1>
 <hr>
+
 <h3>
 	Visa Board election
 </h3>
