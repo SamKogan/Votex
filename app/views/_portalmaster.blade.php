@@ -31,6 +31,12 @@
 
 <body>
 
+<!-- Check for Flash Messages -->
+<!-- Check for Flash Messages -->
+@if(Session::get('flash_message'))
+      <? //echo Session::get('flash_message') ?>
+@endif
+
     <!-- TopNavBar -->
     <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -40,11 +46,13 @@
           </a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-            <li></li>
+            <li>
+
+            </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ "Welcome ".Auth::user()->name."!  "; }}<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="/">Log out</a></li>
+                <li><a href="/logout">Log out</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Account settings</a></li>
               </ul>
@@ -59,7 +67,7 @@
     <!-- SideNav pills -->
         <div class="sidenav col-xs-3">
             <ul class="nav nav-pills nav-stacked" style="max-width: 200px;">
-                <li role="presentation" @yield('li1') ><a href="/portal">Upcoming Votes</a></li>
+                <li role="presentation" @yield('li1') ><a href="/portal">Upcoming Votes <span class="badge">3</span></a></li>
                 <li role="presentation" @yield('li2') ><a href="/mypolicy">My Policy</a></li>
                 <li role="presentation" @yield('li3') ><a href="/advocacygroups">Advocacy Groups</a></li>
                 <li role="presentation" @yield('li4') ><a href="/mysettings">My Settings</a></li>

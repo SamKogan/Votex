@@ -1,23 +1,54 @@
 <?php
 
+/********** HOME CONTROLLER ***********/
+
 class HomeController extends BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
-
-	public function showWelcome()
+//index controller
+	public function index()
 	{
-		return View::make('hello');
+
+		$fund_csv = File::get(app_path().'/database/fnd.csv');
+		$fund_list = str_getcsv($fund_csv,"\r\n"); 
+
+		return View::make('_landing_page')
+			->with('fund_list', $fund_list);
+
+	}
+
+//advocacy groups controller
+	public function advocacygroups()
+	{
+		
+		return View::make('portaladvocacygroups');
+
+	}
+
+//portal home / votes controller
+	public function portal()
+	{
+
+
+		return View::make('portalvotes');
+
+	}
+
+//mysettings controller
+	public function mysettings()
+	{
+		$fund_csv = File::get(app_path().'/database/fnd.csv');
+		$fund_list = str_getcsv($fund_csv,"\r\n"); 
+
+		return View::make('portalmysettings')
+			->with('fund_list', $fund_list);
+	}
+
+//mypolicy controller
+	public function mypolicy()
+	{
+
+		return View::make('portalmypolicy');
+			
 	}
 
 }

@@ -1,55 +1,40 @@
 <?php
 
-
 /********** ROUTES ***********/
 
-// Portal homepage / upcoming votes
-Route::get('/portal', function()
+Route::group(array('before'=>'auth'),function()
 {
-	return View::make('portalvotes');
-});
+	// Portal homepage / upcoming votes
+	Route::get('/portal', 'HomeController@portal');
 
+	// My Policy
+	Route::get('/mypolicy', 'HomeController@mypolicy');
 
-// My Policy
-Route::get('/mypolicy', function()
-{
-	return View::make('portalmypolicy');
-});
+	// Advocacy Groups
+	Route::get('/advocacygroups', 'HomeController@advocacygroups');
 
-// Advocacy Groups
-Route::get('/advocacygroups', function()
-{
-	return View::make('portaladvocacygroups');
-});
-
-// My Setting
-Route::get('/mysettings', function()
-{
-	return View::make('portalmysettings');
+	// My Setting
+	Route::get('/mysettings', 'HomeController@mysettings');
 });
 
 // landing page
-Route::get('/', function()
-{
-	$fund_csv = File::get(app_path().'/database/fnd.csv');
-	$fund_list = str_getcsv($fund_csv,"\r\n"); //true = output array, false = output object
-
-	return View::make('_landing_page')
-		->with('fund_list', $fund_list);
-});
+Route::get('/','HomeController@index');
 
 // process signup form
-Route::post('/signup', function()
-{
+Route::post('/signup', 'UserController@signup');
 
- 	$user = new User;
- 	$user->name = Input::get('name');
- 	$user->password = Hash::make(Input::get('password'));
- 	$user->email = Input::get('email');
- 	$user->fund = Input::get('fund');
- 	$user->save();
+// process signin form
+Route::post('/signin', 'UserController@signin');
 
-	return Response::make('User created! Hurray!');
+// logout
+Route::get('/logout', function() {
+
+    # Log out
+    Auth::logout();
+
+    # Send them to the homepage
+    return Redirect::to('/');
+
 });
 
 ?>

@@ -6292,6 +6292,17 @@ button.close {
 .sidenav {
   margin-top: 30px;
 }
-.modal-dialog-center {
-  margin-top: 20%;
+.modal-dialog-center-1 {
+  margin-top: 12%;
+}
+.modal-dialog-center-2 {
+  margin-top: 10%;
+}
+.user_name {
+  color: white;
+  margin-top: 8px;
+}
+.alignright {
+  position: absolute;
+  right: 0px;
 }

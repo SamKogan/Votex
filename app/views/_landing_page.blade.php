@@ -23,6 +23,11 @@
 
 <body>
 
+<!-- Check for Flash Messages -->
+@if(Session::get('flash_message'))
+      <? //echo Session::get('flash_message') ?>
+@endif
+
 <!-- Header -->
 <header id="top" class="header">
     <div class="text-vertical-center">
@@ -36,7 +41,7 @@
 
 <!-- Sign in Modal -->
 <div class="modal fade sign-in-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm modal-dialog-center">
+  <div class="modal-dialog modal-sm modal-dialog-center-1">
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -66,7 +71,7 @@
 
 <!-- Sign Up Modal -->
 <div class="modal fade sign-up-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm modal-dialog-center">
+  <div class="modal-dialog modal-sm modal-dialog-center-2">
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
