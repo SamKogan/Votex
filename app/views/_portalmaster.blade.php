@@ -11,14 +11,15 @@
 
     @yield('title')
 
-    <link href="css/bootstrap.css" rel="stylesheet">
+    {{ HTML::style('css/bootstrap.css') }}
 
     <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    {{ HTML::style('css/stylish-portfolio.css') }}
 
     <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    {{ HTML::style('font-awesome-4.1.0/css/font-awesome.min.css') }}
+
+    {{ HTML::style('http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic') }}
 
 </head>
 
@@ -34,7 +35,7 @@
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">
-            <img alt="Brand" src="img/votex-small.png" style="width:20px;padding-top:3px;">
+            {{ HTML::image('img/votex-small.png', 'brand', array('style'=>'width:20px;padding-top:3px;')) }}
           </a>
         </div>
         <ul class="nav navbar-nav navbar-right">
@@ -44,9 +45,9 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ "Welcome ".Auth::user()->name."!  "; }}<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="/logout">Log out</a></li>
+                <li><a href="/demo/logout">Log out</a></li>
                 <li class="divider"></li>
-                <li><a href="/mysettings">Account settings</a></li>
+                <li><a href="/demo/mysettings">Account settings</a></li>
               </ul>
             </li>
         </ul>
@@ -59,10 +60,10 @@
     <!-- SideNav pills -->
         <div class="sidenav col-xs-3">
             <ul class="nav nav-pills nav-stacked" style="max-width: 200px;">
-                <li role="presentation" @yield('li1') ><a href="/portal">Upcoming Votes <span class="badge">3</span></a></li>
-                <li role="presentation" @yield('li2') ><a href="/mypolicy">My Policy</a></li>
-                <li role="presentation" @yield('li3') ><a href="/advocacygroups">Advocacy Groups</a></li>
-                <li role="presentation" @yield('li4') ><a href="/mysettings">My Settings</a></li>
+                <li role="presentation" @yield('li1') ><a href="/demo/portal">Upcoming Votes <span class="badge">3</span></a></li>
+                <li role="presentation" @yield('li2') ><a href="/demo/mypolicy">My Policy</a></li>
+                <li role="presentation" @yield('li3') ><a href="/demo/advocacygroups">Advocacy Groups</a></li>
+                <li role="presentation" @yield('li4') ><a href="/demo/mysettings">My Settings</a></li>
             </ul>
         </div>
 
@@ -74,10 +75,10 @@
 </div>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    {{ HTML::script('js/jquery.js') }}
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    {{ HTML::script('js/bootstrap.min.js') }}
 </body>
 
 </html>

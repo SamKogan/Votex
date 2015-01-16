@@ -18,7 +18,7 @@ class UserController extends BaseController {
         $user = User::find(2);
         Auth::login($user);
         
-        return Redirect::to('/portal')->with('flash_message', 'Welcome back!');        
+        return Redirect::to('/demo/portal')->with('flash_message', 'Welcome back!');        
 
 	}
 
@@ -44,7 +44,7 @@ class UserController extends BaseController {
 
         Auth::login($user);
 
-        return Redirect::to('/portal')->with('flash_message', 'Welcome to Votex!');
+        return Redirect::to('/demo/mypolicy')->with('flash_message', 'Welcome to Votex!');
 	}
 
 

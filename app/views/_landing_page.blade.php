@@ -6,8 +6,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <title>Votex</title>
 
@@ -49,7 +47,7 @@
           </div>
           <div class="modal-body">
 
-            {{ Form::open(array('url' => '/signin')) }}
+            {{ Form::open(array('url' => '/demo/signin')) }}
 
                 Email<br>
                 {{ Form::text('email') }}<br><br>
@@ -79,7 +77,7 @@
           </div>
           <div class="modal-body">
 
-            {{ Form::open(array('url' => '/signup')) }}
+            {{ Form::open(array('url' => '/demo/signup')) }}
 
                 Email:<br>
                 {{ Form::text('email') }}<br><br>

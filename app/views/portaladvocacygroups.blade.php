@@ -8,18 +8,23 @@
 @section('content')
 <h1>Advocacy groups</h1>
 <hr>
+
 <?php
 	$Advocacygroups = DB::table('Advocacygroups')->get();
-
-	foreach ($Advocacygroups as $group) {
-		echo "<table>";
-		echo "<tr>";
-		echo "<td colspan='2'>"."<h3>".$group->title."</h3>"."</td>"."</tr>";
-		echo "<tr>"."<td>"."<img src='img/Advocacygroups/".$group->img_id.".png' class='adv_group_img'>"."</td>";
-	    echo "<td>".$group->description."</td>"."</tr>";
-	    echo "</table>";
-	}
 ?>
+
+@foreach ($Advocacygroups as $group)
+	<table>
+		<tr>
+			<td colspan='2'><h3>{{$group->title}}</h3></td>
+		</tr>
+		<tr>
+			<td>{{ HTML::image("img/Advocacygroups/$group->img_id.png", '', array('class'=>'adv_group_img')) }}</td>
+		    <td>{{$group->description}}</td>
+		</tr>
+	</table>
+@endforeach
+
 @stop
 
 @section('li1')
