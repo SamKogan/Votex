@@ -6336,8 +6336,8 @@ div.votextxtcontainer {
   height: auto;
 }
 body.homepage {
-  background-image: url("../img/bg2.jpg");
-  background-size: cover;
+  background-image: url("../img/bg3.png");
+  background-repeat: repeat;
   background-attachment: fixed;
   background-position: bottom;
   background-filter: alpha(opacity=40);
