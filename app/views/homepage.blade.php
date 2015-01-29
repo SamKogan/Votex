@@ -14,7 +14,7 @@
 		Because you do.<br>	 
 	</p><br>
 
-	<a type="button" href="/join" class="btn btn-primary btn-lg center">Join us now</a>
+	<a type="button" href="/join" class="btn btn-default btn-lg center">Join us now</a>
 </div>
 
 @stop

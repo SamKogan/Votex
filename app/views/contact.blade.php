@@ -1,5 +1,13 @@
 @extends('_homepagemaster')
 
+@section('content')
+
+<div class="votextxtcontainer">
+David Stolin
+</div>
+
+@stop
+
 @section('li1')
 @stop
 @section('li2')

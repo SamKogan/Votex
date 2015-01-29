@@ -35,7 +35,7 @@
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">
-            {{ HTML::image('img/votex-small.png', 'brand', array('style'=>'width:20px;padding-top:3px;')) }}
+            {{ HTML::image('img/votex-thick.png', 'brand', array('style'=>'width:54px;padding-top:3px;')) }}
           </a>
         </div>
         <ul class="nav navbar-nav navbar-right">
@@ -43,7 +43,7 @@
 
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ "Welcome ".Auth::user()->name."!  "; }}<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{Auth::user()->name}}</span><span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/demo/logout">Log out</a></li>
                 <li class="divider"></li>
@@ -60,10 +60,10 @@
     <!-- SideNav pills -->
         <div class="sidenav col-xs-3">
             <ul class="nav nav-pills nav-stacked" style="max-width: 200px;">
-                <li role="presentation" @yield('li1') ><a href="/demo/portal">Upcoming Votes <span class="badge">3</span></a></li>
-                <li role="presentation" @yield('li2') ><a href="/demo/mypolicy">My Policy</a></li>
-                <li role="presentation" @yield('li3') ><a href="/demo/advocacygroups">Advocacy Groups</a></li>
-                <li role="presentation" @yield('li4') ><a href="/demo/mysettings">My Settings</a></li>
+                <li role="presentation" @yield('li1') ><a href="/demo/portal"><span class="glyphicon glyphicon-inbox"></span>   Upcoming Votes</a></li>
+                <li role="presentation" @yield('li2') ><a href="/demo/mypolicy"><span class="glyphicon glyphicon-list-alt"></span>   My Policy</a></li>
+                <li role="presentation" @yield('li3') ><a href="/demo/advocacygroups"><span class="glyphicon glyphicon-flag"></span>   Advocacy Groups</a></li>
+                <li role="presentation" @yield('li4') ><a href="/demo/mysettings"><span class="glyphicon glyphicon-cog"></span>   My Settings</a></li>
             </ul>
         </div>
 
