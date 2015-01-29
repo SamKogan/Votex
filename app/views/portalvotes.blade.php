@@ -9,6 +9,9 @@
 @section('content')
 
 	<h1>Votes</h1><hr>
+
+
+	<!-- search and sort by -->
 	<div class="row">
 		<div class="col-xs-6">
 		    <div class="input-group">
