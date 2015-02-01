@@ -6358,3 +6358,17 @@ a.center {
   left: 25%;
   position: relative;
 }
+div.center {
+  left: 10%;
+  position: relative;
+}
+#david {
+  width: 150px;
+  height: auto;
+  border-radius: 0px;
+  filter: grayscale(1);
+}
+.contact {
+  width: 170px;
+  padding: 10px 10px 10px 10px;
+}

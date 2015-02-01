@@ -48,7 +48,11 @@ Route::get('/',function() {
 
 Route::get('/join',function() {
 
-	return View::make('join');
+	$fund_csv = File::get(app_path().'/database/fnd.csv');
+	$fund_list = str_getcsv($fund_csv,"\r\n"); 
+
+	return View::make('join')
+		->with('fund_list', $fund_list);
 
 });
 
