@@ -60,10 +60,11 @@
     <!-- SideNav pills -->
         <div class="sidenav col-xs-3">
             <ul class="nav nav-pills nav-stacked" style="max-width: 200px;">
-                <li role="presentation" @yield('li1') ><a href="/demo/portal"><span class="glyphicon glyphicon-inbox"></span>   Upcoming Votes</a></li>
-                <li role="presentation" @yield('li2') ><a href="/demo/mypolicy"><span class="glyphicon glyphicon-list-alt"></span>   My Policy</a></li>
-                <li role="presentation" @yield('li3') ><a href="/demo/advocacygroups"><span class="glyphicon glyphicon-flag"></span>   Advocacy Groups</a></li>
-                <li role="presentation" @yield('li4') ><a href="/demo/mysettings"><span class="glyphicon glyphicon-cog"></span>   My Settings</a></li>
+                <li role="presentation" @yield('li1') ><a href="/demo/portal"><span class="glyphicon glyphicon-inbox pull-right"></span>   Upcoming Votes</a></li>
+                <li role="presentation" @yield('li2') ><a href="/demo/mypolicy"><span class="glyphicon glyphicon-list-alt pull-right"></span>   My Policy</a></li>
+                <li role="presentation" @yield('li3') ><a href="/demo/advocacygroups"><span class="glyphicon glyphicon-flag pull-right"></span>   Advocacy Groups</a></li>
+                <li role="presentation" @yield('li4') ><a href="/demo/mysettings"><span class="glyphicon glyphicon-cog pull-right"></span>   My Settings</a></li>
+               <li role="presentation" @yield('li4') ><a href="/demo/forums"><span class="glyphicon glyphicon-globe pull-right"></span>   Forums</a></li>
             </ul>
         </div>
 

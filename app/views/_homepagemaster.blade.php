@@ -25,7 +25,7 @@
 	<div class="content">
 		<div class="transbox">
 
-			{{ HTML::image('img/votex_shadow.png', '', array('class'=>'votexlogo')) }}
+			{{ HTML::image('img/votex.png', '', array('class'=>'votexlogo')) }}
 
 		    <div class="sidenav2 col-xs-3">
 		        <ul class="nav nav-pills nav-stacked" style="max-width: 200px;">
