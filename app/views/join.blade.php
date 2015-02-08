@@ -5,7 +5,7 @@
 
 	<div class="row">
 		If you agree with our cause and want to return voting rights to shareholders sign our petition or join our mailing list today!<br>
-		To join our mailing list click <a href="#">here</a>. To sign a petition to your fund for them to return voting rights to you, click <a href="#">here</a>.<br><br><br><br>
+		Click the buttons bellow.<br><br><br><br>
 	</div>
 
 	<div class="row">
@@ -63,6 +63,9 @@
                 
                 Select your fund:<br>
                 {{ Form::select('fund', $fund_list)}}<br><br>
+
+                I agree to sign this petition.
+                {{ Form::checkbox('name', 'value') }}<br><br>
 
                 {{ Form::submit('Sign petition', array('class' => 'btn btn-primary btn-md')) }}
 

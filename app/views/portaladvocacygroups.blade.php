@@ -40,15 +40,12 @@
 ?>
 
 @foreach ($Advocacygroups as $group)
-	<table>
-		<tr>
-			<td colspan='2'><h3>{{$group->title}}</h3></td>
-		</tr>
-		<tr>
-			<td>{{ HTML::image("img/Advocacygroups/$group->img_id.png", '', array('class'=>'adv_group_img')) }}</td>
-		    <td>{{$group->description}}</td>
-		</tr>
-	</table>
+
+<div class="advgroup">
+<a>{{$group->title}}</a>
+{{ HTML::image("img/Advocacygroups/$group->img_id.png", '', array('class'=>'adv_group_img')) }}
+</div>
+
 @endforeach
 
 @stop

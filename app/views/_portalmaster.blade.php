@@ -31,11 +31,11 @@
 @endif
 
     <!-- TopNavBar -->
-    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">
-            {{ HTML::image('img/votex-thick.png', 'brand', array('style'=>'width:54px;padding-top:3px;')) }}
+            {{ HTML::image('img/votex.png', 'brand', array('style'=>'width:70px;padding-top:0px;')) }}
           </a>
         </div>
         <ul class="nav navbar-nav navbar-right">
