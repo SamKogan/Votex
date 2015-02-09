@@ -6,7 +6,7 @@
 
 
 @section('content')
-<h1>Advocacy groups</h1>
+<h1><a href="/demo/advocacygroups">Advocacy groups</a></h1>
 <hr>
 
 <!-- search and sort by -->
@@ -42,7 +42,8 @@
 @foreach ($Advocacygroups as $group)
 
 <div class="advgroup">
-<a class="advgroup">{{$group->title}}</a><hr>
+{{ "<a class='advgroup' href= '/demo/portal/advocacygroups/group/id=".$group->id."'>" }} {{ $group->title }}</a><hr>
+
 {{ HTML::image("img/Advocacygroups/$group->img_id.png", '', array('class'=>'adv_group_img')) }}
 </div>
 

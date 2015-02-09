@@ -8,7 +8,7 @@
 
 @section('content')
 
-	<h1>Votes</h1><hr>
+	<h1><a href="/demo/portal">Votes</a></h1><hr>
 
 
 	<!-- search and sort by -->
@@ -48,7 +48,7 @@
 		$votes = DB::table('votes')->get();
 
 		foreach ($votes as $vote) {
-		    echo "<tr>"."<td>"."<a href='/portal/vote/id=?".$vote->id."'>".$vote->title."</a>"."</td>";
+		    echo "<tr>"."<td>"."<a href='/demo/portal/vote/id=".$vote->id."'>".$vote->title."</a>"."</td>";
 		    echo "<td>".$vote->ticker."</td>";
 		    echo "<td>".$vote->exec_date."</td>"."</tr>";
 		}

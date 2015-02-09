@@ -17,6 +17,36 @@ Route::group(array('prefix'=>'demo'),function()
 
 		// My Setting
 		Route::get('/mysettings', 'HomeController@mysettings');
+
+		// Forums
+		Route::get('/forums', function() {
+
+			return View::make('forums');
+
+		});
+
+		//vote page
+
+		Route::get('/portal/vote/id={id?}', function($id) {
+
+			$vote = DB::table('votes')->where('id', $id)->first();
+
+			return View::make('portalvotes_voteid')
+				->with('vote', $vote);
+		
+		});
+		
+		//group page
+
+		Route::get('/portal/advocacygroups/group/id={id?}', function($id) {
+
+			$group = DB::table('Advocacygroups')->where('id', $id)->first();
+
+			return View::make('portaladvocacygroups_groupid')
+				->with('group', $group);
+		
+		});
+
 	});
 
 	// landing page

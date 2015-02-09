@@ -12,7 +12,7 @@
     {{ Form::open(array('url' => '/updatesettings')) }}
 
         Email:<br>
-        {{ Form::text('email', Auth::user()->email, array('class' => 'form-control')) }}<br>
+        <p class="form-control-static">{{Auth::user()->email}}</p><br>
 
         Password:<br>
         {{ Form::password('password', array('class' => 'form-control')) }}<br>
@@ -26,6 +26,11 @@
         {{ Form::submit('Save', array('class' => 'btn btn-primary btn-md disabled')) }}
 
     {{ Form::close() }}
+    </div>
+    <div class="col-xs-6">
+        <p>
+            If you are having any issues with your account contact customer support. Just kidding. Nothing works.
+        </p>
     </div>
 @stop
 
