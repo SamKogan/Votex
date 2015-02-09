@@ -6365,15 +6365,17 @@ div.center {
   left: 10%;
   position: relative;
 }
-#david {
+.photo {
   width: 150px;
   height: auto;
   border-radius: 0px;
-  filter: grayscale(1);
 }
 .contact {
   width: 170px;
   padding: 10px 10px 10px 10px;
+  margin-right: 20px;
+  display: block;
+  float: left;
 }
 .sidenav2 {
   margin-top: 50px;
@@ -6387,4 +6389,8 @@ h1,
 h2,
 h3 {
   display: inline-block;
+}
+p {
+  font-family: Georgia;
+  font-size: 15px;
 }

@@ -15,8 +15,8 @@
 	</div>
 
 	<div class="col-xs-9">
+		<h5>Description:</h5>
 		<p>
-			<h5>Description:</h5>
 			{{$group->description}}
 		</p>
 	</div>

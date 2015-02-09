@@ -9,7 +9,7 @@
 @section('content')
 
 
-	<h1><a href="/demo/portal">Votes</a>&nbsp;></h1>&nbsp;<h3 >{{$vote->title}}</h3><hr>
+	<h1><a href="/demo/portal">Votes</a>&nbsp;></h1>&nbsp;<h3>{{$vote->title}}</h3><hr>
 
 	<div class="">
 		
