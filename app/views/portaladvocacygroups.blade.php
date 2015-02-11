@@ -41,11 +41,17 @@
 
 @foreach ($Advocacygroups as $group)
 
+{{ "<a class='advgroup' href= '/demo/portal/advocacygroups/group/id=".$group->id."'>" }} 
+
 <div class="advgroup">
-{{ "<a class='advgroup' href= '/demo/portal/advocacygroups/group/id=".$group->id."'>" }} {{ $group->title }}</a><hr>
+
+{{ $group->title }}<hr>
 
 {{ HTML::image("img/Advocacygroups/$group->img_id.png", '', array('class'=>'adv_group_img')) }}
+
 </div>
+
+</a>
 
 @endforeach
 

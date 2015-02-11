@@ -34,10 +34,18 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsablenav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
           <a class="navbar-brand" href="/demo/portal">
             {{ HTML::image('img/votex.png', 'brand', array('style'=>'width:70px;padding-top:0px;')) }}
           </a>
         </div>
+
+        <div class="collapse navbar-collapse" id="collapsablenav">
         <ul class="nav navbar-nav navbar-right">
             <li>
             <a href="/">About</a>
@@ -51,6 +59,7 @@
               </ul>
             </li>
         </ul>
+        </div>
       </div>
     </nav>
 
@@ -58,8 +67,8 @@
     <div class="content">
 
     <!-- SideNav pills -->
-        <div class="sidenav col-xs-3">
-            <ul class="nav nav-pills nav-stacked" style="max-width: 200px;">
+        <div class="sidenav col-md-3">
+            <ul class="nav nav-pills nav-stacked" style="">
                 <li role="presentation" @yield('li1') ><a href="/demo/portal"><span class="glyphicon glyphicon-inbox pull-right"></span>   Upcoming Votes</a></li>
                 <li role="presentation" @yield('li2') ><a href="/demo/mypolicy"><span class="glyphicon glyphicon-list-alt pull-right"></span>   My Policy</a></li>
                 <li role="presentation" @yield('li3') ><a href="/demo/advocacygroups"><span class="glyphicon glyphicon-flag pull-right"></span>   Advocacy Groups</a></li>
@@ -68,7 +77,7 @@
             </ul>
         </div>
 
-        <div class="main col-xs-9 col-md-offset-3">
+        <div class="main col-md-9">
             @yield('content')
         </div>
 

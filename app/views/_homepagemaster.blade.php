@@ -27,8 +27,8 @@
 
 			{{ HTML::image('img/votex.png', '', array('class'=>'votexlogo')) }}
 
-		    <div class="sidenav2 col-xs-3">
-		        <ul class="nav nav-pills nav-stacked" style="max-width: 200px;">
+		    <div class="sidenav2 col-md-3">
+		        <ul class="nav nav-pills nav-stacked" style="">
 		            <li role="presentation" @yield('li1') ><a href="/">About Votex</a></li>
 		            <li role="presentation" @yield('li2') ><a href="/join">Join Us</a></li>
 		            <li role="presentation" @yield('li3') ><a href="/contact">Contact Us</a></li>
@@ -36,7 +36,7 @@
 		        </ul>
 		    </div>
 
-		    <div class="col-xs-9">
+		    <div class="col-md-9" style="height: 470px">
 		    	@yield('content')
 		    </div>  
 		</div>
